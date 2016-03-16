@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="grayscale.js"></script>
+</head>
+<style>
+	*{padding: 0;margin: 0;border: 0;outline: 0;}
+	body{background:url(bg.jpg) center top no-repeat;}
+	.btn{width: 998px;height: 1551px;position: relative;margin: 0 auto;}
+	.btn1{width: 180px;height: 80px;background: url(btn1.png) center no-repeat;position: absolute;bottom: 50px;left: 250px;cursor: pointer;}
+	.btn2{width: 180px;height: 80px;background: url(btn2.png) center no-repeat;position: absolute;bottom: 50px;left: 550px;cursor: pointer;}
+	.gray { 
+	    -webkit-filter: grayscale(100%);
+	    -moz-filter: grayscale(100%);
+	    -ms-filter: grayscale(100%);
+	    -o-filter: grayscale(100%);
+	    
+	    filter: grayscale(100%);
+		
+	    filter: gray;
+	}
+</style>
+<body>
+	<div class="btn">
+		<input type="button" class="btn1" onclick="alert('恭喜获得一张100星愿卷')">
+		<input type="button" class="btn2 gray" id="gray" onclick="alert('2016年1月1日0点开启领取')">
+	</div>
+</body>
+<script>
+	grayscale(document.getElementById("gray"));
+</script>
+</html>
